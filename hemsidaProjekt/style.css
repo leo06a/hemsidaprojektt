@@ -1,0 +1,51 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#header {
+  height: 60px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+
+#menu-icon {
+  color: white;
+  margin-left: 1vw;
+  font-size: 30px;
+}
+
+#menu {
+  background-color: blue;
+  display: none;
+  height: 400px;
+  width: 400px;
+}
+
+a {
+  color: white;
+}
+
+#search {
+  color: white;
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+#form {
+  display: none;
+}
+
+input {
+  border-radius: 10px;
+  height: 30px;
+}
+
+.item {
+  margin: 150px;
+}

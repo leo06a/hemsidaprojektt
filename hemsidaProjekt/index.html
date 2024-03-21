@@ -3,17 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Movies</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/6900270b25.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <h1>Sök i ett API</h1>
-    <form>
-      <input type="text" id="txtSearch" />
-    </form>
-
-    <h2>Results</h2>
-    <div id="searchresults"></div>
-    <script src="script.js"></script>
+    <header id="header">
+      <div class="item">
+        <a>1</a>
+      </div>
+      <div class="item">
+        <a>2</a>
+      </div>
+      <div class="item">
+        <a>3</a>
+      </div>
+      <div class="item">
+        <a>4</a>
+      </div>
+      <div class="item">
+        <a>5</a>
+      </div>
+      <div id="logo"></div>
+      <form id="form">
+        <input type="text" id="txtSearch" />
+      </form>
+      <i id="search" class="fa-solid fa-magnifying-glass"></i>
+      <label id="menu-icon">&#9776;</label>
+    </header>
+    <main class="container">
+      <nav id="menu"></nav>
+      <h2>Results</h2>
+      <div id="searchresults"></div>
+    </main>
   </body>
   <script src="script.js"></script>
 </html>

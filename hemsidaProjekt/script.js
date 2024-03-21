@@ -24,6 +24,30 @@ async function search(searchString) {
 async function renderResults(data) {
     let resultDiv = document.getElementById("searchresults")
     console.log("resultatet: ", data)
-    let results = await search("shrek");
-    renderResults(results);
+    let allObjects = []
+    for (let index = 0; index < results.length; index++) {
+      const object = results[index]
+      console.log(object)
+  }
 }
+
+let menu = document.getElementById('menu')
+let menuIcon = document.getElementById('menu-icon')
+menuIcon.addEventListener('click', (e) => {
+  e.preventDefault()
+  if (menu.style.display == 'block') {
+    menu.style.display = 'none'
+  } else {
+    menu.style.display = 'block'
+  }
+})
+let searchBar = document.getElementById('form')
+let searchIcon = document.getElementById('search')
+searchIcon.addEventListener('click', (e) => {
+  e.preventDefault()
+  if (searchBar.style.display == 'block') {
+    searchBar.style.display = 'none'
+  } else {
+    searchBar.style.display = 'block'
+  }
+})
