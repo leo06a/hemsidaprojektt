@@ -49,3 +49,16 @@ input {
 .item {
   margin: 150px;
 }
+
+.moviediv {
+  height: 200px;
+  width: 250px;
+  margin: 10px;
+  background-color: rgb(43, 226, 150);
+}
+
+#searchresults {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

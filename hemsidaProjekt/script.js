@@ -14,22 +14,26 @@ searchText.onkeydown = async function (event) {
 }
 
 async function search(searchString) {
-    let apiKey = "1a08c634ec1bc9d64558c15c3e88cdbf" 
-    var url = `https://api.themoviedb.org/3/search/movie?query=${searchString}&api_key=${apiKey}`
-    let response = await fetch(url)
-    let json = await response.json()
-    return json
+  let apiKey = "1a08c634ec1bc9d64558c15c3e88cdbf" 
+  var url = `https://api.themoviedb.org/3/search/movie?query=${searchString}&api_key=${apiKey}`
+  let response = await fetch(url)
+  let json = await response.json()
+  return json
 }
 
 async function renderResults(data) {
-    let resultDiv = document.getElementById("searchresults")
-    console.log("resultatet: ", data)
-    let allObjects = []
-    for (let index = 0; index < results.length; index++) {
-      const object = results[index]
-      console.log(object)
-  }
+  let resultDiv = document.getElementById("searchresults")
+  console.log("resultatet: ", data)
+  data.results.forEach(element => {
+    let movieDiv = document.createElement('div')
+    movieDiv.classList.add('moviediv')
+    movieDiv.innerHTML = `
+    ${element.title}
+    `
+    resultDiv.appendChild(movieDiv)
+  })
 }
+
 
 let menu = document.getElementById('menu')
 let menuIcon = document.getElementById('menu-icon')
