@@ -1,6 +1,6 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0vw;
+  padding: 0vw;
 }
 
 ::-webkit-scrollbar {
@@ -8,7 +8,7 @@
 }
 
 #header {
-  height: 60px;
+  height: 7vh;
   background-color: black;
   display: flex;
   align-items: center;
@@ -16,8 +16,8 @@
 
 #menu-icon {
   color: white;
-  margin-left: 1vw;
-  font-size: 30px;
+  font-size: x-large;
+  margin-left: 10vw;
 }
 
 #menu {
@@ -29,15 +29,16 @@
 
 a {
   color: white;
+  font-family: sans-serif;
 }
 
 #search {
   color: white;
-  font-size: 25px;
+  font-size: x-large;
   margin-left: 10px;
 }
 
-#form {
+#searchbar {
   display: none;
 }
 
@@ -54,6 +55,7 @@ input {
   height: 200px;
   width: 250px;
   margin: 10px;
+  border-radius: 10px;
   background-color: rgb(43, 226, 150);
 }
 
@@ -61,4 +63,13 @@ input {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+img {
+  height: 200px;
+  width: 250px;
+}
+
+.container {
+  margin-left: 10px;
 }
