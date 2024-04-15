@@ -34,9 +34,6 @@ async function renderResults(data) {
     `
     movieDiv.addEventListener('click', (e) => {
 
-      let imdbUrl = `movie.html`;
-
-      window.open(imdbUrl, '_blank');
     });
     resultDiv.appendChild(movieDiv)
   })
