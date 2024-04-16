@@ -35,7 +35,7 @@ async function renderResults(data) {
     ${element.title}
     `
     movieDiv.addEventListener('click', (e) => {
-      window.location.href='../html/movie.html'
+      window.open(`movie.html?movieId=${element.id}`, '_blank')
     })
     resultDiv.appendChild(movieDiv)
   })
