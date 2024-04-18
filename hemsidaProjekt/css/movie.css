@@ -1,8 +1,104 @@
-main {
-  height: 100%;
-  width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
-  height: 1000px;
-  width: 1000px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, rgb(148, 34, 34), black);
+}
+
+.poster {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: white;
+}
+
+.movieDetails {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#header {
+  top: 0;
+  height: 7vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  position: fixed;
+}
+
+.logo {
+  left: 20px;
+  height: 9vh;
+  width: 150px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+}
+
+#menu-icon {
+  color: white;
+  font-size: x-large;
+  position: absolute;
+  right: 20px;
+}
+
+#movieContainer {
+  margin-top: 10vh;
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  animation: fade-in 1s ease;
+}
+
+#menu {
+  display: none;
+  background-color: gray;
+  right: 40px;
+  top: 60px;
+  position: absolute;
+  z-index: 10;
+  border-radius: 10px;
+  padding: 10px;
+  display: none;
+  height: 200px;
+  width: 200px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

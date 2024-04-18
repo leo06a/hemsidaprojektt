@@ -9,8 +9,23 @@ async function fetchDetails(url) {
         const response = await fetch(url)
         const data = await response.json()
         console.log(data)
+
         let movie = document.createElement('div')
-        movie.innerHTML = `${data}`
+        movie.classList.add('movieDetails')
+
+        let poster = document.createElement('img')
+        poster.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`
+        poster.alt = `${data.title} Poster`
+        poster.classList.add('poster')
+
+        let title = document.createElement('h2')
+        title.textContent = data.title
+
+        movie.appendChild(poster)
+        movie.appendChild(title)
+
+        container.appendChild(movie)
+
 
     } catch (error) {
         console.error(error)
@@ -18,3 +33,14 @@ async function fetchDetails(url) {
 } 
 
 fetchDetails(url)
+
+let menu = document.getElementById('menu')
+let menuIcon = document.getElementById('menu-icon')
+menuIcon.addEventListener('click', (e) => {
+  e.preventDefault()
+  if (menu.style.display == 'block') {
+    menu.style.display = 'none'
+  } else {
+    menu.style.display = 'block'
+  }
+})
