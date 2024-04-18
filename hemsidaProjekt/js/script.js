@@ -1,7 +1,8 @@
 let searchText = document.getElementById("txtSearch")
 
+
 async function search(searchString) {
-  let apiKey = '1a08c634ec1bc9d64558c15c3e88cdbf' 
+  const apiKey = '1a08c634ec1bc9d64558c15c3e88cdbf' 
   var url = `https://api.themoviedb.org/3/search/movie?query=${searchString}&api_key=${apiKey}`
   let response = await fetch(url)
   let json = await response.json()
