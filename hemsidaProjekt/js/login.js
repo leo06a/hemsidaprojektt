@@ -1,3 +1,3 @@
 document.getElementById('button').addEventListener('click', () => {
-    window.location.href='../html/index.html'
+    window.open('../html/index.html', '_self')
 })

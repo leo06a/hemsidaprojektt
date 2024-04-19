@@ -1,16 +1,20 @@
 let searchText = document.getElementById("txtSearch")
+let resultDiv = document.getElementById('searchresults')
 
 
 async function search(searchString) {
-  const apiKey = '1a08c634ec1bc9d64558c15c3e88cdbf' 
-  var url = `https://api.themoviedb.org/3/search/movie?query=${searchString}&api_key=${apiKey}`
-  let response = await fetch(url)
-  let json = await response.json()
-  return json
+  try {
+    const apiKey = '1a08c634ec1bc9d64558c15c3e88cdbf' 
+    var url = `https://api.themoviedb.org/3/search/movie?query=${searchString}&api_key=${apiKey}`
+    let response = await fetch(url)
+    let json = await response.json()
+    return json
+  } catch (error) {
+    console.error('Error getting movies:', error)
+  }
 }
 
 searchText.onkeydown = async function (event) {
-
   if (event.key === 'Enter') {
     event.preventDefault()
 
@@ -24,19 +28,24 @@ searchText.onkeydown = async function (event) {
 
 
 async function renderResults(data) {
-  let resultDiv = document.getElementById('searchresults')
   console.log('result: ', data)
+  resultDiv.innerHTML = ''
   data.results.forEach(element => {
     let movieDiv = document.createElement('div')
     movieDiv.classList.add('moviediv')
     let poster = document.createElement('img')
     poster.src = `https://image.tmdb.org/t/p/w500/${element.poster_path}`
+    poster.alt = 'Movie Poster'
     movieDiv.style.backgroundImage = `url(${poster.src})`
     movieDiv.innerHTML = `
-    ${element.title}
+      ${element.title}<br>
+      ${element.release_date}<br>
+      ${element.popularity}<br>
+      ${element.overview}<br>
     `
+
     movieDiv.addEventListener('click', (e) => {
-      window.open(`movie.html?movieId=${element.id}`, '_blank')
+      window.open(`movie.html?movieId=${element.id}`, '_self')
     })
     resultDiv.appendChild(movieDiv)
   })

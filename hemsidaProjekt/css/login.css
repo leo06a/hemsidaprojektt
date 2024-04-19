@@ -45,3 +45,10 @@ a {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 20px;
 }
+
+@media screen and (max-width: 600px) {
+  input {
+    margin: 10px;
+    padding: 10px;
+  }
+}

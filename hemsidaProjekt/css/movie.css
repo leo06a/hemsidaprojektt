@@ -17,21 +17,6 @@ body {
   background: linear-gradient(to bottom, rgb(148, 34, 34), black);
 }
 
-.poster {
-  width: 200px;
-  margin-bottom: 10px;
-}
-
-h2 {
-  color: white;
-}
-
-.movieDetails {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
 #header {
   top: 0;
   height: 7vh;
@@ -42,9 +27,25 @@ h2 {
   position: fixed;
 }
 
+.poster {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+h2, section {
+  color: white;
+}
+
+.movieDetails {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
 .logo {
-  left: 20px;
-  height: 9vh;
+  margin-left: 20px;
+  height: 7vh;
   width: 150px;
 }
 
