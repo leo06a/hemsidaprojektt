@@ -44,7 +44,7 @@ async function renderResults(data) {
       ${element.overview}<br>
     `
 
-    movieDiv.addEventListener('click', (e) => {
+    movieDiv.addEventListener('click', () => {
       window.open(`movie.html?movieId=${element.id}`, '_self')
     })
     resultDiv.appendChild(movieDiv)
@@ -71,4 +71,3 @@ searchIcon.addEventListener('click', (e) => {
     searchBar.style.display = 'block'
   }
 })
-
