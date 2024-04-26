@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, rgb(148, 34, 34), black);
+  background: linear-gradient(0deg, #4f4f4f 0%, #000000 84%, #000000 100%);
 }
 
 #header {
@@ -25,6 +25,7 @@ body {
   display: flex;
   align-items: center;
   position: fixed;
+  border-bottom: 1px solid rgb(124, 124, 124);
 }
 
 .poster {
@@ -32,9 +33,15 @@ body {
   margin-bottom: 10px;
 }
 
-h2,
+h1,
+a,
+#menu-icon {
+  color: white;
+}
+
 section {
   color: white;
+  font-size: large;
 }
 
 .movieDetails {
@@ -55,13 +62,11 @@ ul {
 }
 
 a {
-  color: white;
   text-decoration: none;
   margin: 10px;
 }
 
 #menu-icon {
-  color: white;
   font-size: x-large;
   position: absolute;
   right: 20px;
@@ -70,10 +75,10 @@ a {
 #movieContainer {
   margin-top: 10vh;
   width: 90vw;
-  height: 90vh;
+  height: 80vh;
   display: flex;
   justify-content: space-evenly;
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 10px;
   padding: 10px;
   animation: fade-in 1s ease;

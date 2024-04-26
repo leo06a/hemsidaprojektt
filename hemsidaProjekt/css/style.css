@@ -11,7 +11,7 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(to bottom, rgb(148, 34, 34), black);
+  background: linear-gradient(0deg, #4f4f4f 0%, #000000 84%, #000000 100%);
   background-size: cover;
 }
 
@@ -23,6 +23,7 @@ body {
   display: flex;
   align-items: center;
   position: fixed;
+  border-bottom: 1px solid rgb(124, 124, 124);
 }
 
 #menu-icon {
@@ -50,6 +51,11 @@ a {
   color: white;
   text-decoration: none;
   margin: 10px;
+  font-size: x-large;
+}
+
+a:hover {
+  color: rgb(197, 77, 77);
 }
 
 #search {
@@ -65,6 +71,9 @@ a {
   display: none;
   position: absolute;
   right: 100px;
+  width: 20vh;
+  height: 20px;
+  padding: 5px;
 }
 
 input {
@@ -84,6 +93,12 @@ input {
   background-color: rgb(0, 0, 0);
   background-size: cover;
   cursor: pointer;
+  outline: none;
+  transition: outline 1s ease 0s;
+}
+
+.moviediv:hover {
+  outline: 2px solid white;
 }
 
 #searchresults {
@@ -99,7 +114,7 @@ img {
 
 .logo {
   left: 20px;
-  height: 9vh;
+  height: 8vh;
   width: 150px;
 }
 
@@ -118,6 +133,7 @@ ul {
   position: fixed;
   width: 100%;
   bottom: 0;
+  border-top: 1px solid rgb(124, 124, 124);
 }
 
 @media screen and (max-width: 600px) {
@@ -132,7 +148,7 @@ ul {
     right: 40px;
   }
   #searchbar {
-    right: 80px;
+    right: 70px;
   }
   .container {
     margin-left: 0;

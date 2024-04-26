@@ -1,4 +1,4 @@
-let searchText = document.getElementById("txtSearch")
+let searchText = document.getElementById("searchbar")
 let resultDiv = document.getElementById('searchresults')
 
 
@@ -17,15 +17,11 @@ async function search(searchString) {
 searchText.onkeydown = async function (event) {
   if (event.key === 'Enter') {
     event.preventDefault()
-
     let searchTerm = searchText.value 
-
     let results = await search(searchTerm)
-    
     renderResults(results)
   }
 }
-
 
 async function renderResults(data) {
   console.log('result: ', data)
@@ -43,7 +39,6 @@ async function renderResults(data) {
       ${element.popularity}<br>
       ${element.overview}<br>
     `
-
     movieDiv.addEventListener('click', () => {
       window.open(`movie.html?movieId=${element.id}`, '_self')
     })

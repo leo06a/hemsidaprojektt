@@ -18,7 +18,7 @@ async function fetchDetails(url) {
     poster.alt = `${data.title} Poster`
     poster.classList.add('poster')
 
-    let title = document.createElement('h2')
+    let title = document.createElement('h1')
     title.textContent = data.title
 
     let overview = document.createElement('section')
