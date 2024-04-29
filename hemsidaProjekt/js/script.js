@@ -27,35 +27,23 @@ async function renderResults(data) {
   console.log('result: ', data)
   resultDiv.innerHTML = ''
   data.results.forEach(element => {
+    let movieLink = document.createElement('a')
+    movieLink.href = `movie.html?movieId=${element.id}`
     let movieDiv = document.createElement('div')
     movieDiv.classList.add('moviediv')
     let poster = document.createElement('img')
     poster.src = `https://image.tmdb.org/t/p/w500/${element.poster_path}`
-    poster.alt = 'Movie Poster'
+    poster.alt = `${element.title} Movie Poster`
     movieDiv.style.backgroundImage = `url(${poster.src})`
     movieDiv.innerHTML = `
-      ${element.title}<br>
-      ${element.release_date}<br>
-      ${element.popularity}<br>
-      ${element.overview}<br>
+      <h2>${element.title}</h2><br>
     `
-    movieDiv.addEventListener('click', () => {
-      window.open(`movie.html?movieId=${element.id}`, '_self')
-    })
-    resultDiv.appendChild(movieDiv)
+    movieLink.appendChild(movieDiv)
+    resultDiv.appendChild(movieLink)
   })
 }
 
-let menu = document.getElementById('menu')
-let menuIcon = document.getElementById('menu-icon')
-menuIcon.addEventListener('click', (e) => {
-  e.preventDefault()
-  if (menu.style.display == 'block') {
-    menu.style.display = 'none'
-  } else {
-    menu.style.display = 'block'
-  }
-})
+
 let searchBar = document.getElementById('searchbar')
 let searchIcon = document.getElementById('search')
 searchIcon.addEventListener('click', (e) => {

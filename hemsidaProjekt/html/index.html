@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Filmify</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/menu.css" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
     <script
       src="https://kit.fontawesome.com/6900270b25.js"
       crossorigin="anonymous"
@@ -15,21 +17,19 @@
       <div class="logo">
         <img src="../images/logo.png" class="logo" alt="Website Logo" />
       </div>
-      <div class="item">
-        <a href="index.html">Home</a>
-      </div>
+      <a href="index.html" class="item">Home</a>
       <input type="text" placeholder="Search movies" id="searchbar" />
       <i id="search" class="fa-solid fa-magnifying-glass"></i>
       <label id="menu-icon">&#9776;</label>
-    </header>
-    <main class="container">
       <nav id="menu">
         <ul>
-          <a href="index.html">Home</a>
-          <a href="index.html">Contact</a>
-          <a href="login.html">Log out</a>
+          <li><a href="index.html" class="item">Home</a></li>
+          <li><a href="index.html" class="item">Contact</a></li>
+          <li><a href="login.html" class="item">Log out</a></li>
         </ul>
       </nav>
+    </header>
+    <main class="container">
       <div id="searchresults"></div>
     </main>
     <footer class="footer">
@@ -38,4 +38,5 @@
     </footer>
   </body>
   <script src="../js/script.js"></script>
+  <script src="../js/menu.js"></script>
 </html>

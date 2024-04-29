@@ -17,25 +17,13 @@ body {
   background: linear-gradient(0deg, #4f4f4f 0%, #000000 84%, #000000 100%);
 }
 
-#header {
-  top: 0;
-  height: 7vh;
-  width: 100%;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  position: fixed;
-  border-bottom: 1px solid rgb(124, 124, 124);
-}
-
 .poster {
   width: 200px;
   margin-bottom: 10px;
 }
 
 h1,
-a,
-#menu-icon {
+a {
   color: white;
 }
 
@@ -50,28 +38,6 @@ section {
   flex-direction: column;
 }
 
-.logo {
-  margin-left: 20px;
-  height: 7vh;
-  width: 150px;
-}
-
-ul {
-  display: flex;
-  flex-direction: column;
-}
-
-a {
-  text-decoration: none;
-  margin: 10px;
-}
-
-#menu-icon {
-  font-size: x-large;
-  position: absolute;
-  right: 20px;
-}
-
 #movieContainer {
   margin-top: 10vh;
   width: 90vw;
@@ -82,20 +48,6 @@ a {
   border-radius: 10px;
   padding: 10px;
   animation: fade-in 1s ease;
-}
-
-#menu {
-  display: none;
-  background-color: gray;
-  right: 40px;
-  top: 60px;
-  position: absolute;
-  z-index: 10;
-  border-radius: 10px;
-  padding: 10px;
-  display: none;
-  height: 200px;
-  width: 200px;
 }
 
 @keyframes fade-in {
