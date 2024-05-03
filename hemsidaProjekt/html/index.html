@@ -14,9 +14,9 @@
   </head>
   <body>
     <header id="header">
-      <div class="logo">
-        <img src="../images/logo.png" class="logo" alt="Website Logo" />
-      </div>
+      <a class="logo" href="index.html">
+        <img src="../images/logo.png" class="logo" alt="Filmify Logo" />
+      </a>
       <a href="index.html" class="item">Home</a>
       <input type="text" placeholder="Search movies" id="searchbar" />
       <i id="search" class="fa-solid fa-magnifying-glass"></i>
@@ -30,6 +30,7 @@
       </nav>
     </header>
     <main class="container">
+      <div id="error">No search results found</div>
       <div id="searchresults"></div>
     </main>
     <footer class="footer">

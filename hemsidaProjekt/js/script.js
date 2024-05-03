@@ -11,6 +11,8 @@ async function search(searchString) {
     return json
   } catch (error) {
     console.error('Error getting movies:', error)
+    resultDiv.innerHTML = 'Failed to get data'
+    return { results: [] } 
   }
 }
 
@@ -25,6 +27,9 @@ searchText.onkeydown = async function (event) {
 
 async function renderResults(data) {
   console.log('result: ', data)
+  if (data.results.length === 0) {
+    document.getElementById('error').style.display = 'flex'
+  }
   resultDiv.innerHTML = ''
   data.results.forEach(element => {
     let movieLink = document.createElement('a')
@@ -42,7 +47,6 @@ async function renderResults(data) {
     resultDiv.appendChild(movieLink)
   })
 }
-
 
 let searchBar = document.getElementById('searchbar')
 let searchIcon = document.getElementById('search')
