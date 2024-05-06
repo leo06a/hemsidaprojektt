@@ -11,15 +11,31 @@
 
 body {
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background: linear-gradient(0deg, #4f4f4f 0%, #000000 84%, #000000 100%);
 }
 
-.poster {
-  width: 200px;
-  margin-bottom: 10px;
+#hero {
+  width: 70vw;
+  height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#genres {
+  color: white;
+}
+
+#title {
+  font-size: 50px;
+  margin-bottom: 50px;
 }
 
 h1,
@@ -27,7 +43,7 @@ a {
   color: white;
 }
 
-section {
+#overview {
   color: white;
   font-size: large;
 }
@@ -39,12 +55,14 @@ section {
 }
 
 #movieContainer {
-  margin-top: 10vh;
-  width: 90vw;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
   height: 80vh;
   display: flex;
-  justify-content: space-evenly;
-  border: 1px solid rgb(255, 255, 255);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
   padding: 10px;
   animation: fade-in 1s ease;
