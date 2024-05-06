@@ -9,6 +9,7 @@ async function fetchDetails(url) {
     const response = await fetch(url)
     const data = await response.json()
     console.log(data)
+    document.title = data.title
 
     let movie = document.createElement('div')
     movie.classList.add('movieDetails')
@@ -22,7 +23,9 @@ async function fetchDetails(url) {
     title.textContent = data.title
 
     let overview = document.createElement('section')
-    overview.textContent = data.overview
+    overview.innerHTML = `Popularity: ${data.popularity}<br>
+    Release date: ${data.release_date} <br>
+    ${data.overview}`
 
     movie.appendChild(poster)
     movie.appendChild(title)

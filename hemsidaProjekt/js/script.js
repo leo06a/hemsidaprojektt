@@ -1,11 +1,10 @@
 let searchText = document.getElementById("searchbar")
 let resultDiv = document.getElementById('searchresults')
-
+const apiKey = '1a08c634ec1bc9d64558c15c3e88cdbf' 
 
 async function search(searchString) {
+  const url = `https://api.themoviedb.org/3/search/movie?query=${searchString}&api_key=${apiKey}`
   try {
-    const apiKey = '1a08c634ec1bc9d64558c15c3e88cdbf' 
-    var url = `https://api.themoviedb.org/3/search/movie?query=${searchString}&api_key=${apiKey}`
     let response = await fetch(url)
     let json = await response.json()
     return json
@@ -41,7 +40,7 @@ async function renderResults(data) {
     poster.alt = `${element.title} Movie Poster`
     movieDiv.style.backgroundImage = `url(${poster.src})`
     movieDiv.innerHTML = `
-      <h2>${element.title}</h2><br>
+      <h3>${element.title}</h3><br>
     `
     movieLink.appendChild(movieDiv)
     resultDiv.appendChild(movieLink)

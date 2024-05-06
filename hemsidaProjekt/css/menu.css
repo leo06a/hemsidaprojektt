@@ -9,6 +9,10 @@
   border-bottom: 1px solid rgb(124, 124, 124);
 }
 
+h1 {
+  color: white;
+}
+
 .logo {
   margin-left: 20px;
   margin-right: 100px;
