@@ -14,13 +14,16 @@ async function fetchDetails(url) {
     let title = document.getElementById('title')
     title.innerText = data.title
 
-    let hero = document.getElementById('img')
-    hero.style.backgroundImage = `url('https://image.tmdb.org/t/p/w500/${data.backdrop_path}')`
+    let img = document.getElementById('img')
+    img.style.backgroundImage = `url('https://image.tmdb.org/t/p/w500/${data.backdrop_path}')`
 
     let overview = document.getElementById('overview')
-    overview.innerHTML = `Popularity: ${data.popularity}<br>
+    overview.innerHTML = `
+    ${data.overview}<br>
+    <br>
+    Popularity: ${data.popularity}<br>
     Release date: ${data.release_date} <br>
-    ${data.overview}`
+    `
 
     let genres = ''
     data.genres.forEach(genre => {
@@ -28,7 +31,6 @@ async function fetchDetails(url) {
     })
 
     document.getElementById('genres').innerText = genres
-
 
   } catch (error) {
     console.error('Error getting movies:',error)

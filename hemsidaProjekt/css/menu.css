@@ -16,7 +16,7 @@ h1 {
 .logo {
   margin-left: 20px;
   margin-right: 100px;
-  height: 7vh;
+  height: 8vh;
   width: 150px;
 }
 
@@ -30,16 +30,26 @@ h1 {
 #menu {
   display: none;
   background-color: black;
-  right: 40px;
-  top: 60px;
+  right: 7vw;
+  top: 7vh;
   position: absolute;
   z-index: 10;
   border: solid 1px white;
-  border-radius: 10px;
+  border-top: none;
+  border-radius: 1px;
   padding: 10px;
   display: none;
   height: 200px;
   width: 200px;
+  animation: fadeInOut 0.5s ease-in-out forwards;
+}
+
+#menu.fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+#menu.fade-out {
+  animation: fadeOut 0.5s ease-in-out forwards;
 }
 
 ul {
@@ -61,4 +71,15 @@ a {
 
 .item:hover {
   color: rgb(207, 86, 86);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Fade-out animation */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
