@@ -7,11 +7,4 @@ menuIcon.addEventListener('click', (e) => {
   } else {
     menu.style.display = 'block'
   }
-  toggleMenu()
 })
-
-// function toggleMenu() {
-//   var menu = document.getElementById('menu');
-//   menu.classList.toggle('fade-in');
-//   menu.classList.toggle('fade-out');
-// }

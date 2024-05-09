@@ -33,23 +33,15 @@ h1 {
   right: 7vw;
   top: 7vh;
   position: absolute;
-  z-index: 10;
-  border: solid 1px white;
+  z-index: 1000;
+  border: 1px solid rgb(124, 124, 124);
   border-top: none;
   border-radius: 1px;
   padding: 10px;
   display: none;
   height: 200px;
   width: 200px;
-  animation: fadeInOut 0.5s ease-in-out forwards;
-}
-
-#menu.fade-in {
   animation: fadeIn 0.5s ease-in-out forwards;
-}
-
-#menu.fade-out {
-  animation: fadeOut 0.5s ease-in-out forwards;
 }
 
 ul {
@@ -76,10 +68,4 @@ a {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
-}
-
-/* Fade-out animation */
-@keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
 }

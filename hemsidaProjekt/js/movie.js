@@ -21,8 +21,15 @@ async function fetchDetails(url) {
     overview.innerHTML = `
     ${data.overview}<br>
     <br>
-    Popularity: ${data.popularity}<br>
-    Release date: ${data.release_date} <br>
+    <p>
+      Popularity: ${data.popularity}<br>
+      Release date: ${data.release_date}<br>
+    </p>
+    <br>
+    <p>
+    Vote Average: ${data.vote_average}<br>
+    Votes: ${data.vote_count}
+    </p>
     `
 
     let genres = ''
