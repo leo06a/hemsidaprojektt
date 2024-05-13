@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap");
 
 * {
   margin: 0;
@@ -26,17 +26,28 @@ body {
 }
 
 #searchbar {
-  display: block;
-  position: absolute;
-  right: 100px;
-  width: 20vh;
-  height: 20px;
+  background-color: #4f4f4f;
+  margin-top: 10%;
+  width: 25vh;
   padding: 5px;
+  height: 4vh;
+  transition: width 1s ease 0s;
+  color: white;
+  font-size: x-large;
 }
 
-input {
-  border-radius: 10px;
-  height: 30px;
+#searchbar:focus {
+  background-color: #4f4f4f;
+  outline: none;
+}
+
+#searchbar:hover {
+  width: 35vh;
+  transition: width 1s ease 0s;
+}
+
+#searchbar::placeholder {
+  font-size: x-large;
 }
 
 .moviediv {
@@ -72,6 +83,7 @@ input {
 }
 
 #searchresults {
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -88,6 +100,7 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 table {

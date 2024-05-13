@@ -7,6 +7,7 @@
   align-items: center;
   position: fixed;
   border-bottom: 1px solid rgb(124, 124, 124);
+  z-index: 1000;
 }
 
 h1 {
@@ -30,18 +31,17 @@ h1 {
 #menu {
   display: none;
   background-color: black;
-  right: 7vw;
+  right: 3vw;
   top: 7vh;
   position: absolute;
-  z-index: 1000;
   border: 1px solid rgb(124, 124, 124);
   border-top: none;
   border-radius: 1px;
   padding: 10px;
   display: none;
-  height: 200px;
+  height: 100px;
   width: 200px;
-  animation: fadeIn 0.5s ease-in-out forwards;
+  animation: myAnim 1s ease 0s normal forwards;
 }
 
 ul {
@@ -61,11 +61,24 @@ a {
   font-size: x-large;
 }
 
+.item {
+  margin: 30px;
+}
+
 .item:hover {
   color: rgb(207, 86, 86);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: rotateX(-100deg);
+    transform-origin: top;
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: top;
+  }
 }

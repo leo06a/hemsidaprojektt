@@ -30,6 +30,7 @@ async function renderResults(data) {
     document.getElementById('error').style.display = 'flex'
   }
   resultDiv.innerHTML = ''
+  
   data.results.forEach(element => {
     let movieLink = document.createElement('a')
     movieLink.href = `movie.html?movieId=${element.id}`

@@ -13,6 +13,7 @@ async function fetchDetails(url) {
 
     let title = document.getElementById('title')
     title.innerText = data.title
+    title.style.fontSize = 'x-large'
 
     let img = document.getElementById('img')
     img.style.backgroundImage = `url('https://image.tmdb.org/t/p/w500/${data.backdrop_path}')`

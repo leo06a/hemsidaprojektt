@@ -9,7 +9,7 @@ async function getTopMovies() {
   } catch {
     console.error('Error getting movies:', error)
     resultDiv.innerHTML = 'Failed to get data'
-    return { results: [] } 
+    return { results: [] }
   }
 }
 
