@@ -27,13 +27,16 @@ body {
 
 #searchbar {
   background-color: #4f4f4f;
-  margin-top: 10%;
-  width: 25vh;
+  margin: 15px;
+  width: 30vw;
   padding: 5px;
   height: 4vh;
   transition: width 1s ease 0s;
   color: white;
   font-size: x-large;
+  border: none;
+  border-bottom: solid 2px rgb(207, 86, 86);
+  border-radius: 5px;
 }
 
 #searchbar:focus {
@@ -42,7 +45,7 @@ body {
 }
 
 #searchbar:hover {
-  width: 35vh;
+  width: 35vw;
   transition: width 1s ease 0s;
 }
 
@@ -101,6 +104,7 @@ img {
   align-items: center;
   justify-content: center;
   position: relative;
+  padding-bottom: 9vh;
 }
 
 table {
@@ -123,11 +127,23 @@ h2 {
 
 .footer {
   background-color: black;
-  height: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 8vh;
   position: fixed;
   width: 100%;
   bottom: 0;
   border-top: 1px solid rgb(124, 124, 124);
+}
+
+#social {
+  font-size: xx-large;
+}
+
+#about {
+  color: white;
+  margin-left: 10vh;
 }
 
 @media screen and (max-width: 600px) {
