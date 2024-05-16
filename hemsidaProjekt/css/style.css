@@ -27,7 +27,8 @@ body {
 
 #searchbar {
   background-color: #4f4f4f;
-  margin: 15px;
+  margin-top: 8vh;
+  margin-bottom: 15px;
   width: 30vw;
   padding: 5px;
   height: 4vh;
@@ -143,7 +144,7 @@ h2 {
 
 #about {
   color: white;
-  margin-left: 10vh;
+  margin-left: 20vh;
 }
 
 @media screen and (max-width: 600px) {

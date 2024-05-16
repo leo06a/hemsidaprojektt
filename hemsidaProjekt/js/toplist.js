@@ -1,5 +1,4 @@
 const apiKey = '1a08c634ec1bc9d64558c15c3e88cdbf' 
-
 async function getTopMovies() {
   const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&sort_by=popularity.desc&page=1`
   try {
@@ -17,6 +16,7 @@ async function displayTopMovies() {
   const topMovies = await getTopMovies()
   console.log(topMovies)
   let table = document.createElement('table')
+  table.style.width = '40vw'
   let thead = document.createElement('thead')
   let headerRow = document.createElement('tr')
   let titleHeader = document.createElement('th')
@@ -36,6 +36,7 @@ async function displayTopMovies() {
   })
   table.appendChild(tbody)
   let main = document.getElementById('container')
+  main.style.margin = '10vh'
   main.appendChild(table)
 }
 

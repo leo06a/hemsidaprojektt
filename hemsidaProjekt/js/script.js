@@ -34,7 +34,7 @@ async function renderResults(data) {
   data.results.forEach(element => {
     let movieLink = document.createElement('a')
     movieLink.href = `movie.html?movieId=${element.id}`
-    let movieDiv = document.createElement('div')
+    let movieDiv = document.createElement('div')  
     movieDiv.classList.add('moviediv')
     let poster = document.createElement('img')
     poster.src = `https://image.tmdb.org/t/p/w500/${element.poster_path}`
@@ -47,14 +47,3 @@ async function renderResults(data) {
     resultDiv.appendChild(movieLink)
   })
 }
-
-let searchBar = document.getElementById('searchbar')
-let searchIcon = document.getElementById('search')
-searchIcon.addEventListener('click', (e) => {
-  e.preventDefault()
-  if (searchBar.style.display == 'block') {
-    searchBar.style.display = 'none'
-  } else {
-    searchBar.style.display = 'block'
-  }
-})
