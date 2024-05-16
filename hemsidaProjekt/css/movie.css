@@ -16,7 +16,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(0deg, #4f4f4f 0%, #000000 84%, #000000 100%);
+  background: linear-gradient(0deg, #202020 0%, #0c0c0c 84%, #000000 100%);
 }
 
 #img {

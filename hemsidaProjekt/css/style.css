@@ -12,7 +12,7 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(0deg, #4f4f4f 0%, #000000 84%, #000000 100%);
+  background: linear-gradient(0deg, #202020 0%, #0c0c0c 84%, #000000 100%);
   background-size: cover;
 }
 
@@ -27,8 +27,7 @@ body {
 
 #searchbar {
   background-color: #4f4f4f;
-  margin-top: 8vh;
-  margin-bottom: 15px;
+  margin: 4vh;
   width: 30vw;
   padding: 5px;
   height: 4vh;
@@ -130,21 +129,29 @@ h2 {
   background-color: black;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   height: 8vh;
   position: fixed;
-  width: 100%;
+  right: 0;
+  left: 0;
   bottom: 0;
   border-top: 1px solid rgb(124, 124, 124);
 }
 
-#social {
-  font-size: xx-large;
+.media {
+  display: flex;
+  position: absolute;
+  left: 10px;
 }
 
-#about {
+.social {
+  margin: 5vw;
+}
+
+.more {
+  position: absolute;
+  right: 5px;
   color: white;
-  margin-left: 20vh;
 }
 
 @media screen and (max-width: 600px) {
@@ -165,9 +172,22 @@ h2 {
     margin-left: 0;
   }
   .item {
-    margin: 4px;
+    margin: 1px;
   }
   #error {
     margin-top: 80vh;
+  }
+  #searchbar {
+    margin: 8vh;
+    width: 40vw;
+  }
+  #media {
+    left: 5px;
+  }
+  .item {
+    margin: 10px;
+  }
+  .social {
+    margin: 3vw;
   }
 }

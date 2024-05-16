@@ -26,6 +26,11 @@ h1 {
   position: absolute;
   right: 20px;
   color: white;
+  cursor: pointer;
+}
+
+#menu-icon:hover {
+  color: rgb(207, 86, 86);
 }
 
 #menu {
@@ -74,5 +79,14 @@ a {
     opacity: 1;
     transform: rotateX(0deg);
     transform-origin: top;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    margin: 0;
+  }
+  #menu-icon {
+    margin-left: 5px;
   }
 }
