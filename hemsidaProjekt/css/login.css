@@ -6,16 +6,9 @@
   font-family: "Teachers", sans-serif;
 }
 
-div {
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 30px;
+body {
+  background-color: #121212;
   padding: 20px;
-  margin-top: 4vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  cursor: pointer;
 }
 
 #container {
@@ -23,35 +16,74 @@ div {
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #f0f0f0;
+  border-radius: 30px;
+  width: 200px;
+  padding: 20px;
+  margin-top: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+div:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.05);
 }
 
 input {
-  width: 200px;
+  width: 300px;
   margin: 15px;
   padding: 15px;
   border-radius: 30px;
+  border: 1px solid #f0f0f0;
+  background: #2a2a2a;
+  color: #f0f0f0;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+input:focus {
+  background: #383838;
 }
 
 form {
   position: absolute;
-  top: 40%;
-}
-
-body {
-  background-color: black;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 img {
-  width: 30vh;
+  width: 300px;
+  border-radius: 20px;
 }
 
 a {
   text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ff9800;
 }
 
 @media screen and (max-width: 600px) {
   input {
     margin: 10px;
     padding: 10px;
+    width: 80%;
   }
 }
